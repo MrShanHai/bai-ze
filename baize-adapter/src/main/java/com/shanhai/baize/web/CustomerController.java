@@ -15,9 +15,9 @@ public class CustomerController {
     @Autowired
     private CustomerServiceI customerService;
 
-    @GetMapping(value = "/helloworld")
+    @GetMapping(value = "/hellobaize")
     public String helloWorld(){
-        return "Hello, welcome to COLA world!";
+        return "Hello, baize know everything!";
     }
 
     @GetMapping(value = "/customer")
