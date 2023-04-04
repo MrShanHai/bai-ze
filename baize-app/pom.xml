@@ -14,6 +14,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.shanhai.baize</groupId>
             <artifactId>baize-client</artifactId>
         </dependency>
