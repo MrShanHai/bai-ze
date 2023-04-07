@@ -4,7 +4,6 @@ import com.shanhai.baize.dto.VerifyCmd;
 import com.shanhai.baize.dto.data.ResponseDTO;
 import com.shanhai.baize.dto.data.VerifyDTO;
 
-import javax.xml.ws.Response;
 
 public interface VerifyServiceI {
 
