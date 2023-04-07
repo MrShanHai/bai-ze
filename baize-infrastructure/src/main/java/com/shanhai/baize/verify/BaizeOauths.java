@@ -2,7 +2,7 @@ package com.shanhai.baize.verify;
 
 import java.util.Date;
 
-public class baizeOauths {
+public class BaizeOauths {
     private Integer id;
 
     private String userId;

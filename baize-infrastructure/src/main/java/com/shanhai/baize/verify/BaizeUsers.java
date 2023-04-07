@@ -1,8 +1,10 @@
 package com.shanhai.baize.verify;
 
-import java.util.Date;
+import lombok.Builder;
 
-public class baizeUsers {
+import java.util.Date;
+@Builder
+public class BaizeUsers {
     private Integer id;
 
     private Integer userId;

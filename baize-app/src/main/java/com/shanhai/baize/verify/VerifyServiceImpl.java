@@ -1,15 +1,26 @@
 package com.shanhai.baize.verify;
 
+import com.alibaba.cola.catchlog.CatchAndLog;
+import com.alibaba.cola.dto.Response;
 import com.shanhai.baize.api.VerifyServiceI;
 import com.shanhai.baize.dto.VerifyCmd;
 import com.shanhai.baize.dto.data.ResponseDTO;
 import com.shanhai.baize.dto.data.VerifyDTO;
+import com.shanhai.baize.verify.executer.VerifyRegisterAccountAddCmdExe;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
+@Service
+@CatchAndLog
 public class VerifyServiceImpl implements VerifyServiceI {
+
+    @Resource
+    private VerifyRegisterAccountAddCmdExe verifyRegisterAccountAddCmdExe;
 
     @Override
     public ResponseDTO<VerifyDTO> RegisterAccount(VerifyCmd verifyCmd) {
-        return null;
+        return verifyRegisterAccountAddCmdExe.execute(verifyCmd);
     }
 
     @Override

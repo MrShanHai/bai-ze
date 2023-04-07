@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shanhai.baize.verify.baizeUsersExtendsMapper">
-  <resultMap id="BaseResultMap" type="com.shanhai.baize.verify.baizeUsersExtends">
+<mapper namespace="com.shanhai.baize.verify.BaizeUsersExtendsMapper">
+  <resultMap id="BaseResultMap" type="com.shanhai.baize.verify.BaizeUsersExtends">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="field" jdbcType="VARCHAR" property="field" />
@@ -22,7 +22,7 @@
     delete from baize_users_extends
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.shanhai.baize.verify.baizeUsersExtends">
+  <insert id="insert" parameterType="com.shanhai.baize.verify.BaizeUsersExtends">
     insert into baize_users_extends (id, user_id, field, 
       value, created_at, updated_at
       )
@@ -30,7 +30,7 @@
       #{value,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.shanhai.baize.verify.baizeUsersExtends">
+  <insert id="insertSelective" parameterType="com.shanhai.baize.verify.BaizeUsersExtends">
     insert into baize_users_extends
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.shanhai.baize.verify.baizeUsersExtends">
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanhai.baize.verify.BaizeUsersExtends">
     update baize_users_extends
     <set>
       <if test="userId != null">
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.shanhai.baize.verify.baizeUsersExtends">
+  <update id="updateByPrimaryKey" parameterType="com.shanhai.baize.verify.BaizeUsersExtends">
     update baize_users_extends
     set user_id = #{userId,jdbcType=VARCHAR},
       field = #{field,jdbcType=VARCHAR},

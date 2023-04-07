@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shanhai.baize.verify.baizeOauthsMapper">
-  <resultMap id="BaseResultMap" type="com.shanhai.baize.verify.baizeOauths">
+<mapper namespace="com.shanhai.baize.verify.BaizeOauthsMapper">
+  <resultMap id="BaseResultMap" type="com.shanhai.baize.verify.BaizeOauths">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="oauth_type" jdbcType="VARCHAR" property="oauthType" />
@@ -24,7 +24,7 @@
     delete from baize_oauths
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.shanhai.baize.verify.baizeOauths">
+  <insert id="insert" parameterType="com.shanhai.baize.verify.BaizeOauths">
     insert into baize_oauths (id, user_id, oauth_type, 
       oauth_id, unionid, credential, 
       created_at, updated_at)
@@ -32,7 +32,7 @@
       #{oauthId,jdbcType=VARCHAR}, #{unionid,jdbcType=VARCHAR}, #{credential,jdbcType=VARCHAR}, 
       #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.shanhai.baize.verify.baizeOauths">
+  <insert id="insertSelective" parameterType="com.shanhai.baize.verify.BaizeOauths">
     insert into baize_oauths
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -87,7 +87,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.shanhai.baize.verify.baizeOauths">
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanhai.baize.verify.BaizeOauths">
     update baize_oauths
     <set>
       <if test="userId != null">
@@ -114,7 +114,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.shanhai.baize.verify.baizeOauths">
+  <update id="updateByPrimaryKey" parameterType="com.shanhai.baize.verify.BaizeOauths">
     update baize_oauths
     set user_id = #{userId,jdbcType=VARCHAR},
       oauth_type = #{oauthType,jdbcType=VARCHAR},
