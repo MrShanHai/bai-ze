@@ -14,8 +14,8 @@ public class VerifyRegisterAccountAddCmdExe {
 
     public ResponseDTO execute(VerifyCmd cmd) {
 
-        verifyGateway.addUser(cmd);
+        ResponseDTO responseDTO = verifyGateway.addUser(cmd);
 
-        return ResponseDTO.success("");
+        return ResponseDTO.success(responseDTO);
     }
 }
