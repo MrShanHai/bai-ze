@@ -12,4 +12,7 @@ public interface BaizeUsersMapper {
     int updateByPrimaryKeySelective(BaizeUsers record);
 
     int updateByPrimaryKey(BaizeUsers record);
+
+    //根据手机号进行查询
+    BaizeUsers selectByPhone(String phone);
 }

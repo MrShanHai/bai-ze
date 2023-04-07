@@ -125,4 +125,12 @@
       updated_at = #{updatedAt,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+  <select id="selectByPhone" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from baize_users
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
 </mapper>

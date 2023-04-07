@@ -20,7 +20,12 @@ public class VerifyMobileAdaptor {
     private VerifyServiceI verifyServiceI;
 
     @PostMapping(value = "/registerAccount")
-    public ResponseDTO<VerifyDTO> addCustomer(@RequestBody VerifyCmd VerifyCmd) {
+    public ResponseDTO<VerifyDTO> registerAccount(@RequestBody VerifyCmd VerifyCmd) {
         return verifyServiceI.RegisterAccount(VerifyCmd);
+    }
+
+    @PostMapping(value = "/userLogin")
+    public ResponseDTO<VerifyDTO> userLogin(@RequestBody VerifyCmd VerifyCmd) {
+        return verifyServiceI.UserLogin(VerifyCmd);
     }
 }
