@@ -1,5 +1,9 @@
 package com.shanhai.baize.verify;
 
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
 public interface BaizeOauthsMapper {
     int deleteByPrimaryKey(Integer id);
 

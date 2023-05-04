@@ -4,7 +4,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!-- 开启驼峰映射 ，否则查询结果不能转成resultType-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <!--项目DataObject对应的包名-->
+        <package name="com.shanhai.baize.verify"/>
+    </typeAliases>
 	<mappers>
         <mapper resource="mybatis/customer-mapper.xml"/>
+        <mapper resource="mybatis/mappers/BaizeOauthsMapper.xml"/>
+        <mapper resource="mybatis/mappers/BaizeUsersExtendsMapper.xml"/>
+        <mapper resource="mybatis/mappers/BaizeUsersMapper.xml"/>
     </mappers>
 </configuration>
