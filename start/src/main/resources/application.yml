@@ -1,0 +1,99 @@
+# Servlet????
+server:
+  port: 8282
+  servlet:
+    context-path: /qq-robot
+    session:
+      # 30*60=1800???n*60
+      timeout: 1800
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+# ????
+logging:
+  level:
+    com:
+      molicloud:
+        mqr: debug
+
+spring:
+  #json ???????
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    pathmatch:
+      #??spring2.6?swagger2????
+      matching-strategy: ant_path_matcher
+
+knife4j:
+  enable: true
+
+#??????
+project:
+  qq-robot:
+    #???????
+    enable: true
+    #?????
+    cmd-char: '#'
+    #???????
+    workspace: cache
+    #??????
+    log-out: true
+    #root???qq??
+    root-manage-qq:
+      - 773213931
+    #?????qq??
+    #normal-manage-qq:
+    #  - 0
+    #????????????????
+    group-admin-permission: true
+    #??????????????????
+    group-white-list:
+      #???
+      - 720832964
+      #???
+      - 627512824
+      #magic-api?
+      - 739235910
+      #Erupt???????
+      - 821389129
+    #https://www.alapi.cn??token
+    alapi-token: xxxx
+    #https://api.sumt.cn/??token
+    kate-api-token: xxxx
+    #    plugins-start-flag:
+    #      123456:
+    #        AI?????: true
+    #???????
+    open-join-group-message: false
+    #???????
+    join-group-message: ????
+    #gpt????
+    gpt:
+      apiKey: ""
+      #?????
+      url: "https://api.openai.com/v1/completions"
+      #?????????
+      timeout: 30000
+      #?????????,????????????,https://platform.openai.com/docs/api-reference/completions/create
+      request-body:
+        model: "text-davinci-003"
+        max_tokens: 1000
+        temperature: 0.9
+        top_p: 1
+        n: 1
+        stream: false
+        frequency_penalty: 0
+        presence_penalty: 0
+    #????????
+    remote-screen-urls:
+      - "http://127.0.0.1:8283/qq-robot/screenshot/realtime"
+

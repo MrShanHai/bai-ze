@@ -14,6 +14,14 @@
 
     <dependencies>
         <dependency>
+            <groupId>net.mamoe</groupId>
+            <artifactId>mirai-core-jvm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.shanhai.baize</groupId>
             <artifactId>baize-domain</artifactId>
         </dependency>
