@@ -2,8 +2,13 @@ package com.shanhai.baize.robot.pluhins;
 
 import com.shanhai.baize.config.ConfigBean;
 import com.shanhai.baize.config.HookConfigBean;
+import com.shanhai.baize.config.HookHelp;
 import com.shanhai.baize.config.HookManageBean;
+import com.shanhai.baize.match.CharTree;
+import com.shanhai.baize.robot.annotations.HookMethod;
+import com.shanhai.baize.robot.pluhins.provide.SystemRobotPlugin;
 import com.shanhai.baize.robot.robotEventEnum.RobotEventEnum;
+import com.shanhai.baize.util.MessageUtil;
 import lombok.extern.slf4j.Slf4j;
 import net.mamoe.mirai.contact.MemberPermission;
 import net.mamoe.mirai.message.data.At;
