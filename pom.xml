@@ -23,6 +23,7 @@
         <kotlin.version>1.7.21</kotlin.version>
         <knife4j.version>3.0.3</knife4j.version>
         <hutool.version>5.8.11</hutool.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <modules>
@@ -36,6 +37,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!-- hutool -->
             <dependency>
                 <groupId>cn.hutool</groupId>
